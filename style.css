@@ -1,0 +1,255 @@
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #e71919;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* About section styles */
+  .about {
+    max-width: 1200px;
+    margin: 4rem auto;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Menu section styles */
+  .menu {
+    max-width: 1200px;
+    margin: 4rem auto;
+  }
+  
+  .menu h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .menu li {
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .menu li:hover .price {
+    opacity: 1;
+  }
+  
+  .menu img {
+    border-radius: 4px;
+  }
+  
+  .menu h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menu p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .price {
+    background-color: #e71919;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Contact section styles */
+  .contact {
+    max-width: 1200px;
+    margin: 4rem auto;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact input[type="submit"] {
+    background-color: #e71919;
+    color: #fff;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-image: linear-gradient(rgba(231, 25, 25, 0.7), rgba(231, 25, 25, 0.7)), url(pizza.jpg);
+    color: #fff;
+
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+  }
+  
+
+
+  .progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #e71919;
+  z-index: 1000;
+  transition: width 0.3s ease-in-out;
+}
+
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: none;
+    background-image: url(arrowup.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+.scroll-to-top:hover {
+  opacity: 0.8;
+}
+

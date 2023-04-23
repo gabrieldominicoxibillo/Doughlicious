@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doughlicious | Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="pizzacon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Doughlicious</h1>
+        <p>Experience the taste of Italy with our crispy and delicious pizza balls.</p>
+        <a href="#" class="btn">Order Now</a>
+      </section>
+      <section class="about">
+        <h2>About Us</h2>
+        <p>We are a group of student entrepreneurs that specialize in making the best pizza balls you'll ever taste.</p>
+        <a href="https://www.facebook.com/gabrieldominicoxibillo" class="btn">Learn More</a>
+      </section>
+      <section class="menu">
+        <h2>Our Menu</h2>
+        <ul>
+          <li>
+            <img src="classic.jpg" alt="Pizza Ball 1">
+            <h3>Classic Pizza Ball</h3>
+            <p>Our classic pizza ball with tomato sauce, cheese, and pepperoni.</p>
+            <span class="price">₱15.00</span>
+          </li>
+          <li>
+            <img src="veggie.jpg" alt="Pizza Ball 2">
+            <h3>Veggie Pizza Ball</h3>
+            <p>Our delicious pizza ball with mushrooms, onions, and green peppers.</p>
+            <span class="price">₱15.00</span>
+          </li>
+          <li>
+            <img src="meat.jpg" alt="Pizza Ball 3">
+            <h3>Meat-Lovers Pizza Ball</h3>
+            <p>A meaty masterpiece with sausage, bacon, and ham.</p>
+            <span class="price">₱15.00</span>
+          </li>
+        </ul>
+      </section>
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Doughlicious | Grade 12- STEM 2 (2022-2023)</p>
+    </footer>
+
+
+
+    <div id="scroll-btn" onclick="scrollToTop()">
+		<span class="arrow"></span>
+	  </div>
+
+      <div class="progress-bar"></div>
+<a href="#" class="scroll-to-top"></a>
+
+    
+
+
+
+
+	<script>
+
+
+const progressBar = document.querySelector('.progress-bar');
+const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.body.clientHeight;
+
+  const scrolledPercentage = scrolled / (fullHeight - windowHeight) * 100;
+  progressBar.style.width = scrolledPercentage + '%';
+
+  if (scrolledPercentage >= 75) {
+    scrollToTopButton.style.display = 'block';
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+
+
+		window.onscroll = function() {
+		  myFunction();
+	  
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	  
+		  if (winScroll > height * 0.75) {
+			document.getElementById("scroll-btn").style.display = "block";
+		  } else {
+			document.getElementById("scroll-btn").style.display = "none";
+		  }
+		};
+	  
+		function myFunction() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("progress-bar").style.width = scrolled + "%";
+		}
+	  
+		function scrollToTop() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+	  </script>
+	  
+	  
+
+
+
+
+
+  </body>
+</html>
+
